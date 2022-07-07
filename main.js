@@ -4,6 +4,12 @@
  * and displays all their favorite food dishes as shown:
  */
 
+//QUESTION 1: 
+/**
+ * Write a function that parses through the below object 
+ * and displays all their favorite food dishes as shown:
+ */
+
 let person3 = {
     pizza: ["Deep Dish", "South Side Thin Crust"],
     tacos: "Anything not from Taco bell",
@@ -20,7 +26,7 @@ let person3 = {
 //Attempt 1: Returns arrays with food- not sure if correct.
 function showFood(foodlist){
     for (let i = 0; i< Object.entries(foodlist).length; i++) {
-        console.log(Object.entries(foodlist)[i])
+        console.log(Object.entries(foodlist)[i]);
     }
 }
 console.log(showFood(person3))
@@ -44,15 +50,19 @@ Object.values(person3).forEach(person3 => console.log(`${person3}`))
         this.name = name;
         this.age = age;
     }
-    printInfo = () => `Name: ${this.name} \nAge: ${this.age}`
-    increaseAge = () => this.age += 1;
-    increaseAge2 = () => this.age += 3;
+    printInfo = () => { console.log(`Name: ${this.name} \nAge: ${this.age}`) }
+    increaseAge = () => { this.age += 1 };
+    increaseAge2 = () => { this.age += 3} ;
 }
 let tom = new Person('Tom', 30)
+tom.printInfo()
 console.log(tom.increaseAge())
+tom.printInfo()
 
 let jan = new Person('Jan', 25)
+jan.printInfo()
 console.log(jan.increaseAge2())
+jan.printInfo()
 
 //QUESTION 3: 
 /**
